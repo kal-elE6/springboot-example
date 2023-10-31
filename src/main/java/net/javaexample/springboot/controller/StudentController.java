@@ -4,6 +4,9 @@ import net.javaexample.springboot.bean.Student;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @RestController
 public class StudentController {
 
@@ -15,5 +18,16 @@ public class StudentController {
                 "Pis-an"
         );
         return student;
+    }
+
+    @GetMapping("all-student")
+    public List<Student> getAllStudent() {
+        List<Student> students = new ArrayList<>();
+        students.add(new Student(1, "Jason", "Pis-an"));
+        students.add(new Student(2, "Jade", "Pis-an"));
+        students.add(new Student(3, "Dee", "Ocampo"));
+        students.add(new Student(4, "Burrito", "Pis-an"));
+
+        return students;
     }
 }
