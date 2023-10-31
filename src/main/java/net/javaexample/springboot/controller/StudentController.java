@@ -11,7 +11,7 @@ public class StudentController {
     public Student getStudent() {
         Student student = new Student(
                 1,
-                "Jace",
+                "Jason",
                 "Pis-an"
         );
         return student;
